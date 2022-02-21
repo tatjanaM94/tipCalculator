@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="tipStyle.css">
+
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <h1>Tip Calculator</h1>
+
+    <div class="container">
+
+        <div>
+            <span id="refresh" class="glyphicon glyphicon-refresh" style="font-size: 30px;"></span>
+        </div>
+
+        <div id="tipContainer">
+            <div class="inputContent">
+                <label for="Amount">Input Bill Amount</label>
+                <input id="bill" type="text" value="" placeholder="Input Bill Amount">
+
+                <label for="Percentage">Input Tip Percentage</label>
+                <input id="tip" type="text" value="" placeholder="Input Tip Percentage">
+
+                <span id="spanP">Please Enter Numbers in both Input places</span>
+
+            </div>
+
+
+            <div class="tipContainer">
+                <h2>Tip Calculated</h2>
+                <div id="tipCalculated"> </div>
+            </div>
+            <div class="billContainer">
+                <h2>Total Bill</h2>
+                <div id="totalBill"></div>
+            </div>
+
+            <button id="btnId" onclick="btnCalculate()">Calculate</button>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+
+
+        var refresh = document.getElementById('refresh');
+        var spanP = document.getElementById('spanP');
+        spanP.style.display = 'none';
+        
+
+        methods();
+        function methods() {
+            btnCalculate();
+            refreshMethod();
+           
+          
+        }
+
+
+        function btnCalculate() {
+            var bill = document.getElementById("bill").value;
+            var tip = document.getElementById("tip").value;
+            var tipCalculated = document.getElementById("tipCalculated");
+            var totalBill = document.getElementById("totalBill");
+            var result = Number(bill) * Number(tip) / 100;
+            var totalResult = Math.ceil(Number(bill) + result);
+
+            tipCalculated.innerHTML = Math.ceil(result) + ' den.';
+            totalBill.innerHTML = totalResult + ' den.';
+            
+          
+        }
+        function clickValidate(){
+            while (bill.value === "" || tip.value === "") {
+                spanP.style.display == 'block'
+            }
+        }
+
+
+        function refreshMethod() {
+            refresh.addEventListener('click', function () {
+
+                bill.value = "";
+                tip.value = "";
+                totalBill.innerHTML = '';
+                tipCalculated.innerHTML = '';
+
+            })
+
+        }
+
+        function inputValidator() {
+            if (bill.value === "" || tip.value === "") {
+               
+               spanP.style.display == 'block'
+            }
+           
+        }
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

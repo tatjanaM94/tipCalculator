@@ -1,0 +1,95 @@
+
+/* CLASS CSS */
+.container{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color:yellowgreen;
+    margin: 20px;
+    left: 400px;
+    top: 50px;
+    border-radius: 10%;
+}
+.tipContainer{
+position: relative;
+text-align: center;
+top: 50px;
+}
+.billContainer{
+    position: relative;
+    text-align: center;
+    top: 70px;
+}
+h1{
+    text-align: center;
+    
+}
+h2{
+    color: #fff;
+}
+
+.inputContent{
+   
+    margin: 10px;
+}
+.inputContent label{
+    text-align: left;
+    margin-right: 20px;
+    color: #fff;
+}
+
+/* ID CSS */
+#spanP{
+    display: none;
+    color: chartreuse;
+}
+#refresh{
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+#btnId{
+    position: relative;
+    top: 150px;
+    left: 150px;
+  padding: 10px;
+  width: 130px;
+  font-size: large; 
+  color: #fff;
+  background-color: teal;
+}
+#btnId:hover{
+    background-color: tomato;
+    border-color: tomato;
+}
+ #bill{
+  margin-left: 22px;
+}
+
+#tipContainer{
+    position: relative;
+    width: 80%;
+    height: 500px;
+    background-color: rgb(111, 113, 202);
+    padding: 20px;
+    margin: 20px;
+    left: 30px;
+    border-radius: 20%;
+    align-content: center;
+}
+#tipCalculated{
+    position: relative;
+    background-color: orchid;
+    width: 130px;
+    height: 30px;
+    padding: 15px;
+    left: 150px;  
+}
+#totalBill{
+    position: relative;
+    background-color:  orchid;
+    width: 130px;
+    height: 30px;
+    padding: 15px;
+    left: 150px;
+}
